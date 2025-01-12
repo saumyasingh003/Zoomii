@@ -8,7 +8,7 @@ import { useGetCalls } from '@/hooks/useGetCalls';
 import MeetingCard from '@/components/ui/MeetingCard';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { toast  , useToast} from '@/hooks/use-toast';
+import {  useToast} from '@/hooks/use-toast';
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
   const router = useRouter();
@@ -55,7 +55,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
                 .flatMap((call) => call.recordings);
         
               setRecordings(recordings);
-        } catch (error) {
+        } catch  {
             toast({title: "Try again later , Too many requets..."})
         }
      

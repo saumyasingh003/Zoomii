@@ -18,7 +18,7 @@ interface MeetingModalProps {
   children?: ReactNode;
   handleClick?: () => void;
   buttonText?: string;
-  instantMeeting?: boolean;
+  // instantMeeting?: boolean;
   image?: string;
   buttonClassName?: string;
   buttonIcon?: string;
@@ -32,7 +32,7 @@ const MeetingModal = ({
   children,
   handleClick,
   buttonText = "Schedule Meeting",
-  instantMeeting,
+  // instantMeeting,
   image,
   buttonClassName,
   buttonIcon,

@@ -7,7 +7,6 @@ import MeetingModal from "./MeetingModal";
 import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
 import { useToast } from "@/hooks/use-toast";
-import Loader from "@/components/ui/Loader";
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 import ReactDatePicker from "react-datepicker";
