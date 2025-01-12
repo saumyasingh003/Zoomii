@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { avatarImages } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 
+import copy from '../../Public/icons/copy.svg'
+
 interface MeetingCardProps {
   title: string;
   date: string;
@@ -91,7 +93,7 @@ const MeetingCard = ({
               className="bg-dark-4 px-6 sm:px-4 sm:text-sm"
             >
               <Image
-                src="../../Public/icons/copy.svg"
+                src={copy}
                 alt="Copy Link"
                 width={20}
                 height={20}

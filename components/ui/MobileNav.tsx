@@ -11,6 +11,8 @@ import Link from "next/link";
 import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import hamburger from '../../Public/icons/hamburger.svg'
+import logo from '../../Public/icons/logo.svg';
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -19,7 +21,7 @@ const MobileNav = () => {
       <Sheet>
         <SheetTrigger asChild>
           <Image
-            src="../../Public/icons/hamburger.svg"
+            src={hamburger}
             alt="hamburger"
             width={36}
             height={36}
@@ -29,7 +31,7 @@ const MobileNav = () => {
         <SheetContent side="left" className="border-none bg-dark-1">
           <Link href="/" className="flex items-center gap-1">
             <Image
-              src="../../Public/icons/logo.svg"
+              src={logo}
               width={32}
               height={32}
               alt="zoomiii logo"

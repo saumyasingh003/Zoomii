@@ -10,6 +10,18 @@ import { Input } from "./input";
 import { Textarea } from "./textarea";
 import ReactDatePicker from "react-datepicker";
 
+
+import addmeeting from '../../Public/icons/add-meeting.svg'
+import schedulemeeting from '../../Public/icons/schedule.svg';
+import recording from '../../Public/icons/recording.svg';
+import joinmeeting from '../../Public/icons/joinmeeting.svg';
+import copy2 from '../../Public/icons/copy2.svg';
+import checked from '../../Public/icons/checked.svg';
+
+
+
+
+
 const initialValues = {
   dateTime: new Date(),
   description: "",
@@ -64,27 +76,27 @@ const MeetingTypeList = () => {
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       <HomeCard
-        img="../../Public/icons/add-meeting.svg"
+        img={addmeeting}
         title="New Meeting"
         description="Start an instant meeting"
         handleClick={() => setMeetingState("isInstantMeeting")}
       />
       <HomeCard
-        img="../../Public/icons/join-meeting.svg"
+        img={joinmeeting}
         title="Join Meeting"
         description="via invitation link"
         className="bg-blue-1"
         handleClick={() => setMeetingState("isJoiningMeeting")}
       />
       <HomeCard
-        img="../../Public/icons/schedule.svg"
+        img={schedulemeeting}
         title="Schedule Meeting"
         description="Plan your meeting"
         className="bg-purple-1"
         handleClick={() => setMeetingState("isScheduleMeeting")}
       />
       <HomeCard
-        img="../../Public/icons/recordings.svg"
+        img={recording}
         title="View Recordings"
         description="Meeting Recordings"
         className="bg-yellow-1"
@@ -134,8 +146,8 @@ const MeetingTypeList = () => {
             navigator.clipboard.writeText(meetingLink);
             toast({ title: "Link Copied" });
           }}
-          image={"../Public/icons/checked.svg"}
-          buttonIcon="/icons/copy.svg"
+          image={checked}
+          buttonIcon={copy2}
           className="text-center"
           buttonText="Copy Meeting Link"
         />
