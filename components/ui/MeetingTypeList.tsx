@@ -13,9 +13,9 @@ import ReactDatePicker from "react-datepicker";
 
 import addmeeting from '../../Public/icons/add-meeting.svg'
 import schedulemeeting from '../../Public/icons/schedule.svg';
-import recording from '../../Public/icons/recording.svg';
-import joinmeeting from '../../Public/icons/joinmeeting.svg';
-import copy2 from '../../Public/icons/copy2.svg';
+import recording from '../../Public/icons/recordings.svg';
+import joinmeeting from '../../Public/icons/join-meeting.svg';
+import copy2 from '../../Public/icons/copy.svg';
 import checked from '../../Public/icons/checked.svg';
 
 
