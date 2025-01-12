@@ -5,11 +5,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from  '@/components/ui/toaster';
 import "@stream-io/video-react-sdk/dist/css/styles.css";
 import 'react-datepicker/dist/react-datepicker.css'
-import logo from  '../Public/icons/logo.svg'
-
-
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +20,7 @@ export const metadata: Metadata = {
   title: "Zoomii App",
   description: "video confrenceing app",
   icons:{
-    icon: logo
+    icon: '/icons/logo.svg'
   }
 };
 
@@ -39,7 +34,7 @@ export default function RootLayout({
       <ClerkProvider
         appearance={{
           layout:{
-            logoImageUrl :"../Public/icons/y",
+            logoImageUrl :"/icons/yoom-logo.svg",
             socialButtonsVariant: "iconButton"
           },
           variables: {
