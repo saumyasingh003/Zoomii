@@ -19,7 +19,7 @@ const MobileNav = () => {
       <Sheet>
         <SheetTrigger asChild>
           <Image
-            src="/icons/hamburger.svg"
+            src="../../Public/icons/hamburger.svg"
             alt="hamburger"
             width={36}
             height={36}
@@ -29,7 +29,7 @@ const MobileNav = () => {
         <SheetContent side="left" className="border-none bg-dark-1">
           <Link href="/" className="flex items-center gap-1">
             <Image
-              src="/icons/logo.svg"
+              src="../../Public/icons/logo.svg"
               width={32}
               height={32}
               alt="zoomiii logo"

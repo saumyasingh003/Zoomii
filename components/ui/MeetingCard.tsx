@@ -91,7 +91,7 @@ const MeetingCard = ({
               className="bg-dark-4 px-6 sm:px-4 sm:text-sm"
             >
               <Image
-                src="/icons/copy.svg"
+                src="../../Public/icons/copy.svg"
                 alt="Copy Link"
                 width={20}
                 height={20}

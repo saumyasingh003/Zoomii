@@ -1,12 +1,12 @@
 
 
 import Image from 'next/image';
-
+import loadingicon from "../../Public/icons/loading-circle.svg"
 const Loader = () => {
   return (
     <div className="flex-center h-screen w-full">
       <Image
-        src="/icons/loading-circle.svg"
+        src={loadingicon}
         alt="Loading..."
         width={50}
         height={50}

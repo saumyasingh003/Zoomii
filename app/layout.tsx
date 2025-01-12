@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Zoomii App",
   description: "video confrenceing app",
   icons:{
-    icon: '/icons/logo.svg'
+    icon: '../Public/icons/logo.svg'
   }
 };
 
@@ -34,7 +34,7 @@ export default function RootLayout({
       <ClerkProvider
         appearance={{
           layout:{
-            logoImageUrl :"/icons/yoom-logo.svg",
+            logoImageUrl :"../Public/icons/yoom-logo.svg",
             socialButtonsVariant: "iconButton"
           },
           variables: {
