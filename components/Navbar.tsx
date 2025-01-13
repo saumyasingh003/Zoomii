@@ -3,7 +3,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import logo from "../public/icons/logo.svg"
+import logo from "../Public/icons/logo.svg"
 
 const Navbar = () => {
   return (
