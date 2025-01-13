@@ -9,6 +9,12 @@ import { useToast } from "@/hooks/use-toast";
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 import ReactDatePicker from "react-datepicker";
+import schedule from '../../Public/icons/schedule.svg'
+import meeting from '../../Public/icons/add-meeting.svg'
+import recording from '../../Public/icons/recording.svg'
+import checked from '../../Public/icons/checked.svg'
+import copy from '../../Public/icons/copy.svg'
+
 
 const initialValues = {
   dateTime: new Date(),
@@ -64,27 +70,27 @@ const MeetingTypeList = () => {
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       <HomeCard
-        img="/icons/add-meeting.svg"
+        img={meeting}
         title="New Meeting"
         description="Start an instant meeting"
         handleClick={() => setMeetingState("isInstantMeeting")}
       />
       <HomeCard
-        img="/icons/join-meeting.svg"
+        img={meeting}
         title="Join Meeting"
         description="via invitation link"
         className="bg-blue-1"
         handleClick={() => setMeetingState("isJoiningMeeting")}
       />
       <HomeCard
-        img="/icons/schedule.svg"
+        img={schedule}
         title="Schedule Meeting"
         description="Plan your meeting"
         className="bg-purple-1"
         handleClick={() => setMeetingState("isScheduleMeeting")}
       />
       <HomeCard
-        img="/icons/recordings.svg"
+        img={recording}
         title="View Recordings"
         description="Meeting Recordings"
         className="bg-yellow-1"
@@ -134,8 +140,8 @@ const MeetingTypeList = () => {
             navigator.clipboard.writeText(meetingLink);
             toast({ title: "Link Copied" });
           }}
-          image={"/icons/checked.svg"}
-          buttonIcon="/icons/copy.svg"
+          image={checked}
+        buttonIcon={copy}
           className="text-center"
           buttonText="Copy Meeting Link"
         />

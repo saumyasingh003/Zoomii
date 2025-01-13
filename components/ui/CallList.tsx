@@ -9,6 +9,10 @@ import MeetingCard from '@/components/ui/MeetingCard';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {  useToast} from '@/hooks/use-toast';
+import previous from  '../../Public/icons/previous.svg'
+import recording from  '../../Public/icons/recordings.svg'
+import upcoming from  '../../Public/icons/upcoming.svg'
+import play2 from  '../../Public/icons/play.svg'
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
   const router = useRouter();
@@ -79,10 +83,10 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
             key={(meeting as Call).id}
             icon={
               type === 'ended'
-                ? '/icons/previous.svg'
+                ? previous
                 : type === 'upcoming'
-                  ? '/icons/upcoming.svg'
-                  : '/icons/recordings.svg'
+                  ? upcoming
+                  : recording
             }
             title={
               (meeting as Call).state?.custom?.description ||
@@ -99,7 +103,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
                 ? (meeting as CallRecording).url
                 : `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${(meeting as Call).id}`
             }
-            buttonIcon1={type === 'recordings' ? '/icons/play.svg' : undefined}
+            buttonIcon1={type === 'recordings' ? play2 : undefined}
             buttonText={type === 'recordings' ? 'Play' : 'Start'}
             handleClick={
               type === 'recordings'
