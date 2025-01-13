@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    path: "/",
+    domains: ['https://zoomii.vercel.app'], 
   },
 };
 
