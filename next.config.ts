@@ -1,26 +1,13 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ["https://zoomii.vercel.app"], 
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com',
+      },
+    ],
   },
-  remotePatterns: [
-
-    {
-      protocol: "https",
-      // hostname: "multikartall-eta.vercel.app",
-      hostname: "zoomii.vercel.app",
-    },
-    {
-      protocol: "http",
-      hostname: "127.0.0.1",
-    },
-    {
-      protocol: "http",
-      hostname: "localhost",
-    },
-  ],
-  unoptimized: true,
 };
 
 export default nextConfig;
